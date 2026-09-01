@@ -1,6 +1,6 @@
 context:
   name: certbot-dns-ovh
-  version: "5.7.0"
+  version: "5.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: a62833768f9cf0d76f7de771e9a5155e4e469ca100a92e10633983a9640da911
+  sha256: da6e4e6e845e676abb23529f165a0237a0a8bb4b19913dfc6a4d36876624f810
 
 build:
   noarch: python
