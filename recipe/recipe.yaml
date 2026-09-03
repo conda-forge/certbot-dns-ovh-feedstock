@@ -3,11 +3,11 @@ context:
   version: "5.8.0"
 
 package:
-  name: ${{ name|lower }}
+  name: certbot-dns-ovh
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/certbot-dns-ovh/certbot_dns_ovh-${{ version }}.tar.gz
   sha256: da6e4e6e845e676abb23529f165a0237a0a8bb4b19913dfc6a4d36876624f810
 
 build:
@@ -31,7 +31,9 @@ tests:
       imports:
         - certbot_dns_ovh
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://certbot.eff.org
